@@ -28,7 +28,6 @@ export default function SignUp() {
         <View style={styles.radio}>
           <RadioButton />
           <Text>
-            {" "}
             I agree to the{" "}
             <Text style={{ fontWeight: "bold" }}>Terms & Conditions</Text>
           </Text>

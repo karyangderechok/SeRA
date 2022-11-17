@@ -1,15 +1,17 @@
-import { StyleSheet, Text, View, StatusBar, Image } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import { Button } from "react-native-paper";
 
-export default function App() {
+export default function TermsAndCondition() {
   return (
     <>
       <View style={styles.root}>
         <View style={styles.position}>
-          <Image source={require("../../assets/SeRA.png")} />
+          <View style={styles.height}>
+            <Image source={require("../../assets/SeRA.png")} />
+          </View>
         </View>
         <View>
-          <Text style={{ textAlign: "center" }}>
+          <Text style={{ textAlign: "center", fontStyle: 'italic' }}>
             Amids the Covid-19 pandemic, the MSU-IIT Main Library provides this
             online seat reservation registration for students, researchers, and
             staff use the library under the pandemic protocols.
@@ -39,7 +41,9 @@ export default function App() {
           <Text>
             8. Observe the health ans safety protocols inside the library
           </Text>
-          <Text style={{ paddingTop: 10, paddingBottom: 10 }}>
+          <Text
+            style={{ paddingTop: 10, paddingBottom: 10, fontStyle: "italic" }}
+          >
             Note* ForAlumni - Alumni ID or Old Student ID
           </Text>
         </View>
@@ -61,5 +65,11 @@ const styles = StyleSheet.create({
   textMargin: {
     padding: 10,
     margin: 5,
+  },
+  position: {
+    paddingTop: 50,
+    alignContent: "center",
+    alignItems: "center",
+    height: 250,
   },
 });

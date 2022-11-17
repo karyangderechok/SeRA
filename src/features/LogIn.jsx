@@ -1,34 +1,44 @@
-import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, StatusBar, SafeAreaView, Image } from "react-native";
-import { Button, RadioButton, TextInput } from "react-native-paper";
+import React from "react";
+import { Image, Text, View, StyleSheet } from "react-native";
+import { Button, TextInput } from "react-native-paper";
 
-export default function App() {
+export default function LogIn() {
   return (
     <>
-      <SafeAreaView style={styles.container}>
-        <Image source={require('../../assets/icon.png')}/>
-        <View>
+      <View style={styles.root}>
+        <View style={styles.height}>
+          <View style={styles.position}>
+            <Image source={require("../../assets/SeRA.png")} />
+          </View>
+        </View>
+
+        <View style={styles.padding}>
           <Text>Email Address</Text>
           <TextInput label="Email Address" />
         </View>
 
-        <View>
+        <View style={styles.padding}>
           <Text>Password</Text>
-          <TextInput label={"Password"} />
+          <TextInput label="Password" />
         </View>
 
-        <View>
-          <Button mode="contained">Log In</Button>
+        <View  style={{paddingLeft: 150, paddingRight: 150}}>
+          <Button mode="contained">Log in</Button>
         </View>
-      </SafeAreaView>
+      </View>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: StatusBar.currentHeight,
-    flex: 1,
-    backgroundColor: "white",
+  position: {
+    paddingTop: 100,
+    alignContent: "center",
+    alignItems: "center",
+    height: 300,
   },
+  padding: {
+    padding: 20,
+    paddingTop: 5,
+  }
 });
