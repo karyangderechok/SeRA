@@ -5,24 +5,22 @@ import { Button, TextInput } from "react-native-paper";
 export default function LogIn() {
   return (
     <>
-      <View style={styles.root}>
-        <View style={styles.height}>
-          <View style={styles.position}>
-            <Image source={require("../../assets/SeRA.png")} />
-          </View>
+      <View>
+        <View style={styles.position}>
+          <Image source={require("../../assets/SeRA.png")} />
         </View>
 
-        <View style={styles.padding}>
+        <View style={{ paddingLeft: 20, paddingRight: 20, paddingBottom: 20 }}>
           <Text>Email Address</Text>
           <TextInput label="Email Address" />
         </View>
 
-        <View style={styles.padding}>
+        <View style={{ paddingLeft: 20, paddingRight: 20, paddingBottom: 20 }}>
           <Text>Password</Text>
           <TextInput label="Password" />
         </View>
 
-        <View  style={{paddingLeft: 150, paddingRight: 150}}>
+        <View style={{ padding: 20 }}>
           <Button mode="contained">Log in</Button>
         </View>
       </View>
@@ -37,8 +35,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: 300,
   },
-  padding: {
-    padding: 20,
-    paddingTop: 5,
-  }
 });

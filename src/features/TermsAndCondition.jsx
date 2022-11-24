@@ -11,12 +11,12 @@ export default function TermsAndCondition() {
           </View>
         </View>
         <View>
-          <Text style={{ textAlign: "center", fontStyle: 'italic' }}>
+          <Text style={{ textAlign: "center", fontStyle: "italic" }}>
             Amids the Covid-19 pandemic, the MSU-IIT Main Library provides this
             online seat reservation registration for students, researchers, and
             staff use the library under the pandemic protocols.
           </Text>
-          <Text style={{ paddingTop: 10, paddingBottom: 10 }}>
+          <Text style={{paddingTop: 10, paddingBottom: 10 }}>
             Guidelines in Reserving/Using the Main Library facilities
           </Text>
           <Text>1. Register validated ID at the User Monitoring System</Text>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   position: {
-    paddingTop: 50,
+    paddingTop: 30,
     alignContent: "center",
     alignItems: "center",
     height: 250,

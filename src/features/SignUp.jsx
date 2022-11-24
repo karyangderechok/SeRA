@@ -1,71 +1,41 @@
-import { StyleSheet, Text, View, Image } from "react-native";
-import { Button, RadioButton, TextInput } from "react-native-paper";
-import LogIn from "./LogIn";
+import { Text, View, Image } from "react-native";
+import { Button, TextInput } from "react-native-paper";
+// import LogIn from "./LogIn";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useNavigation } from "@react-navigation/native";
+// import LogIn from "./LogIn";
+
+const navigation = createNativeStackNavigator()
 
 export default function SignUp() {
+  const navigation= useNavigation()
   return (
     <>
-      <View style={styles.root}>
-        <View style={styles.position}>
+        <View style={{ alignItems: "center", paddingTop: 50, paddingBottom: 25 }}>
           <Image source={require("../../assets/SeRA.png")} />
         </View>
 
-        <View style={styles.distance}>
-          <Text>Email Address</Text>
+        <View className='px-20'>
+          <Text style={{marginBottom: 5}}>Email Address</Text>
           <TextInput label="Email Address" />
         </View>
 
-        <View style={styles.distance}>
-          <Text>Password</Text>
+        <View style={{ margin: 10 }}>
+          <Text style={{marginBottom: 5}}>Password</Text>
           <TextInput label={"Password"} />
         </View>
 
-        <View style={styles.distance}>
-          <Text> ID Number</Text>
+        <View style={{ margin: 10 }}>
+          <Text style={{marginBottom: 5}}> ID Number</Text>
           <TextInput label={"ID Number"} />
         </View>
-
-        <View style={styles.radio}>
-          <RadioButton />
-          <Text>
-            I agree to the{" "}
-            <Text style={{ fontWeight: "bold" }}>Terms & Conditions</Text>
-          </Text>
+        <View style={{padding: 10}}>
+          <Button mode="contained" onPress={() => navigation.navigate('Reservationdashboard')}>Sign Up</Button>
         </View>
-
-        <View style={styles.space}>
-          <Button mode="contained">Sign Up</Button>
-        </View>
-        <View style={styles.connect}>
+        <View style={{padding: 10}}>
           <Text style={{ fontStyle: "italic" }}>Already have an account?</Text>
           <Button>Log In</Button>
         </View>
-      </View>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  root: {
-    padding: 20,
-  },
-  radio: {
-    flexDirection: "row",
-    alignContent: "center",
-    alignItems: "center",
-  },
-  position: {
-    paddingTop: 25,
-    alignContent: "center",
-    alignItems: "center",
-  },
-  connect: {
-    alignContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-  },
-  distance: {
-    margin: 10,
-  },
-  rounded: {},
-});
