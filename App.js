@@ -4,6 +4,7 @@ import TermsAndCondition from "./src/features/TermsAndCondition";
 import SignUp from "./src/features/SignUp";
 import LogIn from "./src/features/LogIn";
 import Reservationdashboard from "./src/features/Reservationdashboard";
+import Reservationdashboard2 from "./src/features/Reservationdasboard2";
 import Confirmationdashboard from "./src/features/Confirmationdashboard";
 import ReservationDetails from "./src/features/ReservationDetails";
 import SeatReserved from "./src/features/SeatReserved";
@@ -15,15 +16,16 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const ConfirmationdashboardScreen = () => <Confirmationdashboard/>
-const LogInScreen = () => <LogIn/>
 const SignUpScreen = () => <SignUp/>
+const LogInScreen = () => <LogIn/>
 const DetailConfirmationScreen = () => <DetailConfirmation/>
-const ReservationdashboardScreen = () => <ReservationDetails/>
+const ReservationdashboardScreen = () => <Reservationdashboard/>
+const Reservationdasboard2Screen = () => <Reservationdashboard2/>
 const SeatReservedScreen = () => <SeatReserved/>
 const ScannerScreen = () => <Scanner/>
 const QRcodeScreen = () => <QRcode/>
 const LastScreen= () => <Last/>
-const TermsAndConditionScreen = () => <TermsAndConditionScreen/>
+const TermsAndConditionScreen = () => <TermsAndCondition/>
 const ReservationDetailsScreen = () => <ReservationDetails/>
 function DetailsScreen() {
   return (
@@ -37,21 +39,20 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   
   return (
-    
-    <NavigationContainer>\
+    <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-
-        <Stack.Screen name= "Confimationdashboard" component={ConfirmationdashboardScreen}/>
-        <Stack.Screen name= "DetailConfirmation" component={DetailConfirmationScreen}/>
-        <Stack.Screen name= "Last" component={LastScreen}/>
         <Stack.Screen name= "LogIn" component={LogInScreen}/>
-        <Stack.Screen name= "QRcode" component={QRcodeScreen}/>
-        <Stack.Screen name= "Reservationdashboard" component={ReservationdashboardScreen}/>
-        <Stack.Screen name= "ReservationDetails" component={ReservationDetailsScreen}/>
-        <Stack.Screen name= "Scanner" component={ScannerScreen}/>
-        <Stack.Screen name= "SeatReserved" component={SeatReservedScreen}/>
         <Stack.Screen name= "SignUp" component={SignUpScreen}/>
         <Stack.Screen name= "TermsAndCondition" component={TermsAndConditionScreen}/>
+        <Stack.Screen name= "Reservationdashboard" component={ReservationdashboardScreen}/>
+        <Stack.Screen name= "Reservationdashboard2" component={Reservationdasboard2Screen}/>
+        <Stack.Screen name= "Confimationdashboard" component={ConfirmationdashboardScreen}/>
+        <Stack.Screen name= "ReservationDetails" component={ReservationDetailsScreen}/>
+        <Stack.Screen name= "SeatReserved" component={SeatReservedScreen}/>
+        <Stack.Screen name= "QRcode" component={QRcodeScreen}/>
+        <Stack.Screen name= "Scanner" component={ScannerScreen}/>
+        <Stack.Screen name= "DetailConfirmation" component={DetailConfirmationScreen}/>
+        <Stack.Screen name= "Last" component={LastScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
 

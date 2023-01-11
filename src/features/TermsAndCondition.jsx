@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import { Button } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 
 export default function TermsAndCondition() {
+  const navigation= useNavigation()
   return (
     <>
       <View style={styles.root}>
@@ -49,7 +51,7 @@ export default function TermsAndCondition() {
         </View>
 
         <View style={{ paddingTop: 10, paddingBottom: 10 }}>
-          <Button mode="contained">Check Seats</Button>
+          <Button mode="contained" onPress={() => navigation.navigate('Reservationdashboard')}>Check Seats</Button>
         </View>
       </View>
     </>

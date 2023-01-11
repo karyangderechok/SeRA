@@ -1,8 +1,10 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { Button, Card, Paragraph } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 
 export default function SeatReserved() {
+  const navigation= useNavigation()
   return (
     <>
       <View style={{ alignItems: "center", paddingTop: 50, paddingBottom: 25 }}>
@@ -85,7 +87,7 @@ export default function SeatReserved() {
         </Text>
       </View>
       <View style={{ paddingTop: 40, paddingLeft: 80, paddingRight: 80 }}>
-        <Button mode="contained"> QR Scanner </Button>
+        <Button mode="contained" onPress={() => navigation.navigate('QRcode')}> QR Scanner </Button>
       </View>
     </>
   );

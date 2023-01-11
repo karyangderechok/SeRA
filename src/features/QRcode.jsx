@@ -1,7 +1,10 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
+import { Button } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 
 export default function QRcode() {
+  const navigation= useNavigation()
   return (
     <>
       <View style={{ alignItems: "center", paddingTop: 50, paddingBottom: 25 }}>
@@ -20,6 +23,9 @@ export default function QRcode() {
         >
           Please look at the number on the seat and choose the seat you reserved.
         </Text>
+          <View style={{ padding: 20 }}>
+          <Button mode="contained" onPress={() => navigation.navigate('Scanner')}>Scan</Button>
+        </View>
       </View>
     </>
   );

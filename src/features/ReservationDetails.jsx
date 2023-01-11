@@ -1,17 +1,18 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { Button, Card, Paragraph, Title } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 // import CardContent from "react-native-paper/lib/typescript/components/Card/CardContent";
 
 export default function ReservationDetails({ date, time, occupant }) {
   const Textdate = date;
   const Texttime = time;
   const Textoccupant = occupant;
-
+  const navigation= useNavigation()
   return (
     <>
       <View style={{ alignItems: "center", paddingTop: 40, paddingBottom: 25 }}>
-        <Image source={require("../../assets/SeRA.png")} />
+        <Image source={require("../../assets/SeRA.png")}  />
       </View>
       <View>
         <Text
@@ -80,7 +81,7 @@ export default function ReservationDetails({ date, time, occupant }) {
       </Card>
 
       <View style={{ padding: 100 }}>
-        <Button mode="contained"> Confirm </Button>
+        <Button mode="contained" onPress={() => navigation.navigate('SeatReserved')}> Confirm </Button>
       </View>
     </>
   );

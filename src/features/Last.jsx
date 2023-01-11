@@ -1,8 +1,10 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { Button } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Last(){
+    const navigation= useNavigation()
     return (
         <>
         <View style={{ alignItems: "center", paddingTop: 50, paddingBottom: 25 }}>
@@ -21,7 +23,7 @@ export default function Last(){
         </View>
         <View>
             <View style={{padding: 50, alignItems:"center"}}>
-                <Button mode="contained"> DONE </Button>
+                <Button mode="contained" onPress={() => navigation.navigate('LogIn')}> DONE </Button>
             </View>
         </View>
         </>

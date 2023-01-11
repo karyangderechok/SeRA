@@ -1,8 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Image, Text, View, StyleSheet } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 export default function LogIn() {
+  const navigation = useNavigation()
   return (
     <>
       <View>
@@ -21,7 +23,7 @@ export default function LogIn() {
         </View>
 
         <View style={{ padding: 20 }}>
-          <Button mode="contained">Log in</Button>
+          <Button mode="contained" onPress={() => navigation.navigate('TermsAndCondition')}>Log in</Button>
         </View>
       </View>
     </>

@@ -2,8 +2,10 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import { Card, Checkbox } from "react-native-paper";
 import { NavigationContainer } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
 export default function DetailConfirmation() {
+  const navigation= useNavigation()
   return (
     <>
       <View style={{ alignItems: "center", paddingTop: 50, paddingBottom: 25 }}>
@@ -50,8 +52,8 @@ export default function DetailConfirmation() {
       <View
         style={{ alignItems: "center", flexDirection: "row", paddingLeft: 100 }}
       >
-        <Checkbox.Item label="Yes"></Checkbox.Item>
-        <Checkbox.Item label="No"></Checkbox.Item>
+        <Checkbox.Item label="Yes" onPress={() => navigation.navigate('Last')}></Checkbox.Item>
+        <Checkbox.Item label="No" onPress={() => navigation.navigate('QRcode')}></Checkbox.Item>
       </View>
     </>
   );

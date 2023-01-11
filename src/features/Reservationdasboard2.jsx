@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import { RadioButton } from "react-native-paper";
+import { IconButton, MD3Colors, RadioButton } from "react-native-paper";
 // import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 import { useNavigation } from "@react-navigation/native";
 import Chair from "../components/chair";
 
-export default function Reservationdashboard() {
+export default function Reservationdashboard2() {
   const navigation = useNavigation();
   const [checked, setChecked] = React.useState('first');
   return (
@@ -44,19 +44,8 @@ export default function Reservationdashboard() {
             <Chair/>
             <Chair/>
             <Chair/>
-            <Chair/>
           </View>
           <View> 
-            <Chair/>
-            <Chair/>
-            <Chair/>
-            <Chair/>
-            <Chair/>
-            <Chair/>
-            <Chair/>
-          </View>
-          <View> 
-            <Chair/>
             <Chair/>
             <Chair/>
             <Chair/>
@@ -71,7 +60,7 @@ export default function Reservationdashboard() {
             <Chair/>
             <Chair/>
             <Chair/>
-            <Chair/>
+            
           </View>
           <View> 
             <Chair/>
@@ -80,7 +69,6 @@ export default function Reservationdashboard() {
             <Chair/>
             <Chair/>
             <Chair/>
-            <Chair/>
           </View>
           <View> 
             <Chair/>
@@ -88,27 +76,26 @@ export default function Reservationdashboard() {
             <Chair/>
             <Chair/>
             <Chair/>
-            <Chair/>
-            <Chair/>
+            <Chair/>  
           </View>
-        </View>
+          </View>
 
         <View class="radioButton" style={{ flexDirection: "row", padding: 20 }}>
           <View style={styles.connect}>
             <RadioButton
-            value="first"
-            status={ checked === 'first' ? 'checked' : 'unchecked' }
-            onPress={() => setChecked('first')}
-            />
+              value="first"
+            //   status={ checked === 'first' ? 'checked' : 'unchecked' }
+            //   onPress={() => setChecked('first')}
+              onPress={() => navigation.navigate('Reservationdashboard')}></RadioButton>
             <Text>1</Text>
           </View>
           <View style={styles.connect}>
-            <RadioButton
-        value="second"
-        status={ checked === 'second' ? 'checked' : 'unchecked' }
-        // onPress={() => setChecked('second')}
-        onPress={() => navigation.navigate('Reservationdashboard2')}></RadioButton>
-            <Text>2</Text>
+            <RadioButton 
+            value="second"
+            status={ "checked" }
+            onPress={() => setChecked('second')}
+            />
+            <Text >2</Text>
           </View>
         </View>
       </View>
